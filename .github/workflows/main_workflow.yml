@@ -28,6 +28,7 @@ jobs:
         run: |
           export PYTHONPATH=$PWD
           coverage run --branch test_stream_bms_data/sender/sender.test.py
+          coverage html
           coverage report
       - name: Upload coverage
         uses: actions/upload-artifact@v2
