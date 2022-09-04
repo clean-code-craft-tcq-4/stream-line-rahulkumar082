@@ -12,9 +12,14 @@ class Test_Sender(unittest.TestCase):
         self.assertTrue(verify_no_false_values_in_list(csv_data))
 
 def verify_no_false_values_in_list(list_of_values):
+    flag = False
     for row in list_of_values:
-        if False in row:
-            return False
+        flag = match_value_in_a_row(flag, row)
+    return flag
+
+def match_value_in_a_row(value, row):
+    if value in row:
+        return False
     return True
 
 
