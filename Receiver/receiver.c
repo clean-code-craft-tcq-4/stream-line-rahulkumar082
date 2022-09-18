@@ -123,7 +123,7 @@ int PrintMinMaxSMAData(float *temperature,float *soc,int size)
     {
       functionStatus=E_OK;
     	int dataSize;
-    	float TempeartureMin,TempeartureMax,SocMin,SocMax,Sma,TemperatureSma,SocSma;
+    	float TempeartureMin,TempeartureMax,SocMin,SocMax,TemperatureSma,SocSma;
     	dataSize=ReadConsoleData(temperature,soc,size);
     	TempeartureMin = FindMinimumValue(temperature,dataSize);
     	TempeartureMax = FindMaximumValue(temperature,dataSize);
