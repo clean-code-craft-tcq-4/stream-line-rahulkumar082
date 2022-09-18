@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "Receiver/receiver.h"
+#include "../Receiver/receiver.h"
 
 void TEST_CASE_01()
 {
