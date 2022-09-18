@@ -22,7 +22,8 @@ int ReadConsoleData(float *temperature,float *soc,int size)
         scanf("%c",&dummy);
         if(dummy == ']')
         {
-            break;
+            /*This part cannot be covered ,it's a special usecase to the specific receiver*/
+            break;   
         }
         scanf("%c",&dummy);
         scanf("%f",&temperature[count]);
@@ -145,6 +146,7 @@ int PrintMinMaxSMAData(float *temperature,float *soc,int size)
     	else
     	{
     	    printf("couldn't take %d samples for SMA",(int)SMA_SAMPLE_NUMBER);
+            functionStatus=E_NOT_OK;
     	}
     }
   return(functionStatus);
