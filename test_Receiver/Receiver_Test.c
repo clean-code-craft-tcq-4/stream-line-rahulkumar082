@@ -21,10 +21,10 @@ void TEST_CASE_02()
   float temperature_02[10]={1.5,55,89.5,25.6,6,2.8,9.8,22,15.6,8.9};
   float soc_02[10]={98,56,85.6,95,1,56,89,26,6.8,7.9};
   int size_02=10;
-  assert(FindMaximumValue(&temperature_02[0],size)==89.5);
-  assert(FindMaximumValue(&soc_02[0],size)==98);
-  assert(FindMinimumValue(&temperature_02[0],size)==1.5);
-  assert(FindMinimumValue(&soc_02[0],size)==1);
+  assert(FindMaximumValue(&temperature_02[0],size_02)==89.5);
+  assert(FindMaximumValue(&soc_02[0],size_02)==98);
+  assert(FindMinimumValue(&temperature_02[0],size_02)==1.5);
+  assert(FindMinimumValue(&soc_02[0],size_02)==1);
 }
 void TEST_CASE_03()
 {
@@ -39,14 +39,14 @@ void TEST_CASE_03()
 void TEST_CASE_04()
 {
   printf("\n Test case to find min ,max and SMA from the console read if data size not zero \n");
-  float temperature_04[10]soc_04[10];
+  float temperature_04[10],soc_04[10];
   int size_04=10;
   assert(PrintMinMaxSMAData(&temperature_04[0],&soc_04[0],size_04)==E_OK);
 } 
 void TEST_CASE_05()
 {
   printf("\n Test case to find min ,max and SMA from the console read if data size is zero \n");
-  float temperature_05[10]soc_05[10];
+  float temperature_05[10],soc_05[10];
   int size_05=0;
   assert(PrintMinMaxSMAData(&temperature_05[0],&soc_05[0],size_05)==E_NOT_OK);
 } 
