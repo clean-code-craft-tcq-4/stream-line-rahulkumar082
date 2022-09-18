@@ -50,7 +50,13 @@ void TEST_CASE_05()
   int size_05=0;
   assert(PrintMinMaxSMAData(&temperature_05[0],&soc_05[0],size_05)==E_NOT_OK);
 } 
-
+void TEST_CASE_06()
+{
+  printf("\n Test case to find min ,max and SMA from the console read if data size is not zero but less than 5 \n");
+  float temperature_06[10],soc_06[10];
+  int size_06=2;
+  assert(PrintMinMaxSMAData(&temperature_06[0],&soc_06[0],size_06)==E_NOT_OK);
+} 
 int main()
 {
    TEST_CASE_01();
@@ -58,4 +64,5 @@ int main()
    TEST_CASE_03();
    TEST_CASE_04();
    TEST_CASE_05();
+   TEST_CASE_06();
 }
