@@ -5,10 +5,10 @@
 
 void TEST_CASE_01()
 {
-	printf("\n Test case to console read of temperature and soc values\n");
+  printf("\n Test case to console read of temperature and soc values\n");
   float temperature_1[10],soc_1[10];
   int size=2;
-  assert(ReadConsoleData(float *temperature,float *soc,int size)==size);
+  assert(ReadConsoleData(&temperature_1[0],&soc_1[0],size)==size);
   printf("\n read data from console");
   for(int i=0;i<size;i++)
   {
