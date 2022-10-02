@@ -1,8 +1,9 @@
 from stream_bms_data.sender.sensors.soc import State_Of_Charge
 from stream_bms_data.sender.sensors.temperature import Temperature
+from helper_scripts.sender_csv_generator import create_input_csv_for_sender
 from helper_scripts.csv.read_csv import read_csv_format
 
-
+create_input_csv_for_sender()
 csv_file = "stream_bms_data/sender/csv_input.csv"
 csv_data = read_csv_format(csv_file=csv_file)
 
@@ -22,3 +23,5 @@ def check_if_sensor_okay(sensor_class, value):
 
 def console_print(verified_csv_data):
     print(verified_csv_data)
+
+verify_csv_data_with_sensors()
