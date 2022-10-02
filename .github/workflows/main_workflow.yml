@@ -33,7 +33,7 @@ jobs:
       - name: Run and collect coverage (Receiver)
         run: |
           export PYTHONPATH=$PWD
-          coverage run --branch test_stream_bms_data/receiver/receiver.test.py
+          coverage run --branch test_stream_bms_data/reciever/receiver.test.py
           coverage html
           coverage report
       - name: Project Demonstration
